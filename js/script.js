@@ -24,13 +24,13 @@ function convertCSVtoArray(str){ // 読み込んだCSVデータが文字列と�
     alert(result[1][2]); // 300yen
 }
 
-getCSV(); //最初に実行される
-
 var book = getCsv();
+
+
 　for (var i = 0; i < book.length; i++) {
   for (var j = 0; j < book[0].length; j++){
 　　var bookList = document.createElement('li');
-　　todoList.textContent = book[i][j] + "1 " + book[j][i];
+　　todoList.textContent = book[i][0];
 　　document.getElementById('list').appendChild(bookList);
 　}
 }
