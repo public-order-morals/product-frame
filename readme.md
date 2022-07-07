@@ -1,5 +1,7 @@
 ### ❯ 各種ファイルの役割と構造について
-細かい説明ここに書く
+ファイル構造
+![structure](https://user-images.githubusercontent.com/49393142/177698697-e615d950-0b48-4d6d-b05a-24492a099413.png)
+
 ### ❯ HTML file
 - index.html ... login画面
 - resuster.html ... 登録画面
