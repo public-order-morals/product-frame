@@ -1,98 +1,67 @@
-function jsonOutput() {
-    // XMLHttpRequestインスタンスを作成
-    let request = new XMLHttpRequest();
-  
-    // JSONファイルが置いてあるパスを記述
-    request.open('GET', './js/output.json');
-    request.send();
-  
-    // JSON読み込み時の処理
-    request.onreadystatechange = () => {
-      // 全てのデータを受信・正常に処理された場合
-      if (request.readyState == 4 && request.status == 200) {
-        // JSONデータを変換
-        let json = JSON.parse(request.responseText);
-  
-        // 生成したHTMLを入れておく変数
-        let html = '';
-        // 生成したモーダル用のHTMLを入れておく変数
-        let modal = '';
-  
-        // JSONにあるオブジェクト数の分だけfor文で処理
-        for (let i = 0; i < json.length; i++) {
-          // ポップアップ表示の場合
-          if (json[i].display === 'popup') {
-            let htmlParts =
-              '<div class="p-parts js-modalOpen" aria-expanded="false" aria-controls="modal_' +
-              // 配列のインデックスは0から始まるため、分かりやすく+1して正の整数にしている
-              (i + 1) +
-              '">' +
-              '<figure><img src="' +
-              json[i].image +
-              '" alt=""></figure>' +
-              '<p class="p-parts__title">' +
-              json[i].title +
-              '</p>' +
-              '<div>';
-  
-            // 先述の変数の中に、出来上がったHTMLを格納
-            html += htmlParts;
-  
-            // モーダル生成
-            let modalParts =
-              '<div class="p-modal" id="modal_' +
-              (i + 1) +
-              '" aria-hidden="true">' +
-              '<div class="p-modal__wrap">' +
-              '<button class="js-modalClose" aria-controls="modal_' +
-              (i + 1) +
-              '"></button>' +
-              '<h3 class="p-modal__title">' +
-              json[i].title +
-              '</h3>' +
-              '<figure class="p-modal__image"><img src="' +
-              json[i].image +
-              '" alt="' +
-              json[i].title +
-              '"></figure>' +
-              '<div class="p-modal__text">' +
-              '<p>' +
-              json[i].text +
-              '</p>' +
-              '<a class="link" href="' +
-              json[i].url +
-              '" target="_blank">リンク先へ飛ぶ' +
-              '</a>' +
-              '</div>' +
-              '</div>' +
-              '</div>';
-  
-            // 先述の変数の中に、出来上がったモーダル用HTMLを格納
-            modal += modalParts;
-          } else {
-            // アンカーリンクの場合
-            let htmlParts =
-              '<div class="p-parts">' +
-              '<a href="' +
-              json[i].url +
-              '" target="_blank">' +
-              '<figure><img src="' +
-              json[i].image +
-              '" alt=""></figure>' +
-              '<p class="p-parts__title">' +
-              json[i].title +
-              '</p>' +
-              '</a>' +
-              '</div>';
-  
-            // 先述の変数の中に、出来上がったHTMLを格納
-            html += htmlParts;
-          }
-        }
-  
-        // 変数に格納したHTMLを出力
-        document.getElementById('container').innerHTML = html;
-        document.getElementById('modal').innerHTML = modal;
-      }
-    };
+let fileInput = document.getElementById('csv_file');
+let message = document.getElementById('message');
+let fileReader = new FileReader();
+let items = [];
+
+// ファイル変更時イベント
+fileInput.onchange = () => {
+  message.innerHTML = "読み込み中..."
+
+  let file = fileInput.files[0];
+  fileReader.readAsText(file, "UTF-8");
+};
+
+// ファイル読み込み時
+fileReader.onload = () => {
+  // ファイル読み込み
+  let fileResult = fileReader.result.split('\r\n');
+
+  // 先頭行をヘッダとして格納
+  let header = fileResult[0].split(',')
+  // 先頭行の削除
+  fileResult.shift();
+
+  // CSVから情報を取得
+  items = fileResult.map(item => {
+    let datas = item.split(',');
+    let result = {};
+    for (const index in datas) {
+      let key = header[index];
+      result[key] = datas[index];
+    }
+    return result;
+  });
+
+  // テーブル初期化
+  let tbody = document.querySelector('#csv_data_table tbody');
+  tbody.innerHTML = "";
+
+  //　CSVの内容を表示
+  let tbody_html = "";
+  for (item of items) {
+    tbody_html += `<tr>
+        <td>${item.id}</td>
+        <td>${item.資産番号}</td>
+        <td>${item.所属}</td>
+        <td>${item.資産名}</td>
+        <td>${item.場所}</td>
+        <td>${item.担当}</td>
+        <td>${item.管理者}</td>
+        <td>${item.形式}</td>
+        <td>${item.個数}</td>
+        <td>${item.識別番号}</td>
+        <td>${item.取得日時}</td>
+        <td>${item.編集日時}</td>
+      </tr>
+      `
   }
+  tbody.innerHTML = tbody_html;
+
+  message.innerHTML = items.length + "件のデータがあります。"
+}
+
+// ファイル読み取り失敗時
+fileReader.onerror = () => {
+  items = [];
+  message.innerHTML = "ファイル読み取りに失敗しました。"
+}
