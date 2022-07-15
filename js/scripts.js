@@ -65,3 +65,13 @@ fileReader.onerror = () => {
   items = [];
   message.innerHTML = "ファイル読み取りに失敗しました。"
 }
+
+
+$(document).ready(function () {
+  $('.select').select2({
+    width: '200px',
+    placeholder: '　',
+    language: 'ja',
+    tags: true
+  });
+});
