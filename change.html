@@ -24,8 +24,60 @@
     <section class="section">
   
 		<h1 class="title">資産の削除、変更</h1>
-    <div id="container"></div>
-    <div id="modal"></div>
+
+    <div class="columns">
+      <div class="column">
+        <article class="message is-primary">
+          <div class="message-body">
+            <span id="message">変更するデータを選択してください</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+
+    <div class="columns">
+      <div class="column">
+
+        <input type="button" value="更新" onclick="refresh();">
+        <input type="button" value="console.log(data)" onclick="Utt();">
+
+      </div>
+    </div>
+
+
+
+    <table id="output_csv"></table>
+
+    <div class="columns">
+      <div class="column" style="overflow-y: scroll;">
+        <table id="csv_data_table" class="table is-bordered">
+          <thead>
+            <tr>
+              <th></th>
+              <th>資産番号</th>
+              <th>所属</th>
+              <th>資産名</th>
+              <th>場所</th>
+              <th>担当</th>
+              <th>管理者</th>
+              <th>形式</th>
+              <th>個数</th>
+              <th>識別番号</th>
+              <th>取得日時</th>
+              <th>編集日時</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+  </section>
+
+
+  <script src="js/scripts.js"></script>
+  <script src="js/root.js"></script>
 
 
 

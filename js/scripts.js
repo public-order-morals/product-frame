@@ -31,7 +31,7 @@ fileReader.onload = () => {
     }
     return result;
   });
-
+  console.log(items);
   // テーブル初期化
   let tbody = document.querySelector('#csv_data_table tbody');
   tbody.innerHTML = "";
@@ -56,7 +56,7 @@ fileReader.onload = () => {
       `
   }
   tbody.innerHTML = tbody_html;
-
+  console.log(tbody_html);
   message.innerHTML = items.length + "件のデータがあります。"
 }
 

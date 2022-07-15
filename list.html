@@ -1,63 +1,30 @@
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/list.css">
-    <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/root.js"></script>
 
-    <meta charset="utf-8">
-    <title>資産の一覧表示</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <title>test</title>
-  </head>
-  
-  <nav id="g_navi">
-	  <ul>
-		<li><a href="list.html">一覧・検索</a></li>
-		<li><a href="submit.html">登録</a></li>
-		<li><a href="change.html">削除・変更</a></li>
-		<li><a href="user.html">ユーザ情報編集</a></li>
-	  </ul>
-  </nav>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/list.css">
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/root.js"></script>
 
-  <body>
+  <meta charset="utf-8">
+  <title>資産の一覧表示</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <title>test</title>
+</head>
+
+<nav id="g_navi">
+  <ul>
+    <li><a href="list.html">一覧・検索</a></li>
+    <li><a href="submit.html">登録</a></li>
+    <li><a href="change.html">削除・変更</a></li>
+    <li><a href="user.html">ユーザ情報編集</a></li>
+  </ul>
+</nav>
+
+<body>
   <section class="section">
-
-    <form id="form2" action="https://google.com/" method="get">
-      <input id="sbox2"  id="s" name="s" type="text" placeholder="資産番号で検索"/>
-      <button type="submit" id="sbtn2"><i class="fas fa-search"></i></button>
-    </form>
-
-    <form id="form3" action="https://google.com/" method="get">
-      <input id="sbox3"  id="s" name="s" type="text" placeholder="所属で検索"/>
-      <button type="submit" id="sbtn3"><i class="fas fa-search"></i></button>
-    </form>
-
-    <form id="form4" action="https://google.com/" method="get">
-      <input id="sbox4"  id="s" name="s" type="text" placeholder="資産名で検索"/>
-      <button type="submit" id="sbtn4"><i class="fas fa-search"></i></button>
-    </form>
-
-    <form id="form5" action="https://google.com/" method="get">
-      <input id="sbox5"  id="s" name="s" type="text" placeholder="場所で検索"/>
-      <button type="submit" id="sbtn2"><i class="fas fa-search"></i></button>
-    </form>
-
-    <form id="form6" action="https://google.com/" method="get">
-      <input id="sbox6"  id="s" name="s" type="text" placeholder="担当で検索"/>
-      <button type="submit" id="sbtn3"><i class="fas fa-search"></i></button>
-    </form>
-
-    <form id="form7" action="https://google.com/" method="get">
-      <input id="sbox7"  id="s" name="s" type="text" placeholder="管理者で検索"/>
-      <button type="submit" id="sbtn4"><i class="fas fa-search"></i></button>
-    </form>
-        
-  
-    
-  
-    <h1 class="title">資産一覧</h1>
+    <h1 class="title">資産一覧・検索</h1>
 
     <div class="columns">
       <div class="column">
@@ -69,17 +36,37 @@
       </div>
     </div>
 
+    
     <div class="columns">
       <div class="column">
 
         <input id="csv_file" value="ファイルを直接開く" type="file">
         <input type="button" value="更新" onclick="refresh();">
-        <button type="submit" onclick="import_csv('js/data.csv');">データを取得</button>
-
+        <input type="button" value="console.log(data)" onclick="Utt();">
+        <input type="button" value="403ボタン" onclick="del();">
+        <input type="button" value="uchidaボタン" onclick="del2();">
+        <input type="button" value="uchidaボタン" onclick="del2();">
+        <input type="button" value="uchidaボタン" onclick="del2();">
+        <input type="button" value="uchidaボタン" onclick="del2();">        <input type="button" value="uchidaボタン" onclick="del2();">
+        <input type="button" value="uchidaボタン" onclick="del2();">        <input type="button" value="uchidaボタン" onclick="del2();">
+        <input type="button" value="uchidaボタン" onclick="del2();">        <input type="button" value="uchidaボタン" onclick="del2();">
+        <input type="button" value="uchidaボタン" onclick="del2();">        <input type="button" value="uchidaボタン" onclick="del2();">
+        <input type="button" value="uchidaボタン" onclick="del2();">        <input type="button" value="uchidaボタン" onclick="del2();">
+        <input type="button" value="uchidaボタン" onclick="del2();">        <input type="button" value="uchidaボタン" onclick="del2();">
+        <input type="button" value="uchidaボタン" onclick="del2();">        <input type="button" value="uchidaボタン" onclick="del2();">
+        <input type="button" value="uchidaボタン" onclick="del2();">        <input type="button" value="uchidaボタン" onclick="del2();">
+        <input type="button" value="uchidaボタン" onclick="del2();">        <input type="button" value="uchidaボタン" onclick="del2();">
+        <input type="button" value="uchidaボタン" onclick="del2();">        <input type="button" value="uchidaボタン" onclick="del2();">
+        <input type="button" value="uchidaボタン" onclick="del2();">        <input type="button" value="uchidaボタン" onclick="del2();">
+        <input type="button" value="uchidaボタン" onclick="del2();">        <input type="button" value="uchidaボタン" onclick="del2();">
+        <input type="button" value="uchidaボタン" onclick="del2();">        <input type="button" value="uchidaボタン" onclick="del2();">
+        <input type="button" value="uchidaボタン" onclick="del2();">        <input type="button" value="uchidaボタン" onclick="del2();">
+        <input type="button" value="uchidaボタン" onclick="del2();">        <input type="button" value="uchidaボタン" onclick="del2();">
+        <input type="button" value="uchidaボタン" onclick="del2();">        <input type="button" value="uchidaボタン" onclick="del2();">
+        <input type="button" value="uchidaボタン" onclick="del2();">        
       </div>
     </div>
 
-  
 
     <table id="output_csv"></table>
 
@@ -108,10 +95,39 @@
     </div>
 
   </section>
-  
+  <form id="form2" action="https://google.com/" method="get">
+    <input id="sbox2" id="s" name="s" type="text" placeholder="資産番号で検索" />
+    <button type="submit" id="sbtn2"><i class="fas fa-search"></i></button>
+  </form>
+
+  <form id="form3" action="https://google.com/" method="get">
+    <input id="sbox3" id="s" name="s" type="text" placeholder="所属で検索" />
+    <button type="submit" id="sbtn3"><i class="fas fa-search"></i></button>
+  </form>
+
+  <form id="form4" action="https://google.com/" method="get">
+    <input id="sbox4" id="s" name="s" type="text" placeholder="資産名で検索" />
+    <button type="submit" id="sbtn4"><i class="fas fa-search"></i></button>
+  </form>
+
+  <form id="form5" action="https://google.com/" method="get">
+    <input id="sbox5" id="s" name="s" type="text" placeholder="場所で検索" />
+    <button type="submit" id="sbtn2"><i class="fas fa-search"></i></button>
+  </form>
+
+  <form id="form6" action="https://google.com/" method="get">
+    <input id="sbox6" id="s" name="s" type="text" placeholder="担当で検索" />
+    <button type="submit" id="sbtn3"><i class="fas fa-search"></i></button>
+  </form>
+
+  <form id="form7" action="https://google.com/" method="get">
+    <input id="sbox7" id="s" name="s" type="text" placeholder="管理者で検索" />
+    <button type="submit" id="sbtn4"><i class="fas fa-search"></i></button>
+  </form>
 
   <script src="js/scripts.js"></script>
   <script src="js/root.js"></script>
-  
-  </body>
+
+</body>
+
 </html>
