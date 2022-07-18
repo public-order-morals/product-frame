@@ -43,12 +43,11 @@ __2. 自分のpcでサーバーを立ててローカル環境で動かす場合_
 
 ## ❯ 各種ファイルの役割と構造について
 フォルダの階層はこんな感じになってます（vscodeより）
-![structure](https://user-images.githubusercontent.com/49393142/177698697-e615d950-0b48-4d6d-b05a-24492a099413.png)
+![structure](https://user-images.githubusercontent.com/49393142/179450006-70776a80-4f76-403f-9b93-ed46b6d03940.png)
 
 ### ❯ HTML
 
 - index.html ... ログイン画面
-- resuster.html ... ユーザ登録画面
 - list.html ... 資産の一覧表示、資産の検索
 - change.html ... 資産の変更
 - submit.html ... 資産の登録
@@ -74,4 +73,4 @@ __2. 自分のpcでサーバーを立ててローカル環境で動かす場合_
 
 ### ❯ local
 
-- ログイン関係のファイルやサーバー側プログラムを仮で置いてます。
+- その他今は使用していないファイルなど
