@@ -9,7 +9,7 @@
 	padding: 0 10px;
 	position: absolute;
 	left: 100;
-	top: 0;
+	top: 58;
 	border-radius: 2px;
 	outline: 0;
 	background: #eee;
@@ -43,7 +43,7 @@
 	padding: 0 10px;
 	position: absolute;
 	left: 100;
-	top: 100;
+	top: 110;
 	border-radius: 2px;
 	outline: 0;
 	background: #eee;
@@ -78,7 +78,7 @@
 	padding: 0 10px;
 	position: absolute;
 	left: 100;
-	top: 200;
+	top: 170;
 	border-radius: 2px;
 	outline: 0;
 	background: #eee;
@@ -113,7 +113,7 @@
 	padding: 0 10px;
 	position: absolute;
 	left: 100;
-	top: 300;
+	top: 230;
 	border-radius: 2px;
 	outline: 0;
 	background: #eee;
@@ -149,8 +149,8 @@
 	height: 50px;
 	padding: 0 10px;
 	position: absolute;
-	left: 400;
-	top: 0;
+	left: 330;
+	top: 50;
 	border-radius: 2px;
 	outline: 0;
 	background: #eee;
@@ -183,8 +183,8 @@
 	height: 50px;
 	padding: 0 10px;
 	position: absolute;
-	left: 400;
-	top: 100;
+	left: 330;
+	top: 110;
 	border-radius: 2px;
 	outline: 0;
 	background: #eee;
@@ -218,8 +218,8 @@
 	height: 50px;
 	padding: 0 10px;
 	position: absolute;
-	left: 400;
-	top: 200;
+	left: 330;
+	top: 170;
 	border-radius: 2px;
 	outline: 0;
 	background: #eee;
@@ -252,8 +252,8 @@
 	height: 50px;
 	padding: 0 10px;
 	position: absolute;
-	left: 400;
-	top: 300;
+	left: 330;
+	top: 230;
 	border-radius: 2px;
 	outline: 0;
 	background: #eee;
