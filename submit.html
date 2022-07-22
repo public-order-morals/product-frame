@@ -1,19 +1,17 @@
 <html>
   <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/submit.css">
-    <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/root.js"></script>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/submit.css">
+  <script type="text/javascript" src="js/submit.js"></script>
 
-    <link href="css/library/select2.min.css" rel="stylesheet" />
-    <script src="js/library/jquery-3.6.0.min.js"></script>
-    <script src="js/library/select2.min.js"></script>
+  <link href="css/library/select2.min.css" rel="stylesheet" />
+  <script src="js/library/jquery-3.6.0.min.js"></script>
+  <script src="js/library/select2.min.js"></script>
 
     <meta charset="utf-8">
     <title>資産の登録</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <title>test</title>
   </head>
   
   <nav id="g_navi">
@@ -40,54 +38,72 @@
       </div>
     </div>
 
- 
-    <form id="form10" action="https://google.com/" method="get">
-      <!--<input id="sbox10" id="s" name="s" type="text" placeholder="所属を入力してください" />-->
-      <select id="sbox10" class="select" style="width: 200px;">
-        <option value="default">形式を選択</option>
-        <option value="PC">PC</option>
-        <option value="PHONE">PHONE</option>
-      </select>
-    </form>
+  <div>
 
-    <form id="form11" action="https://google.com/" method="get">
-      <input id="sbox11" id="s" name="s" type="text" placeholder="場所を入力してください" />
-    </form>
+    <select id="submit_kind" class="select" style="width: 200px;">
+      <option value="default">所属を選択</option>
+      <option value="AD">AD</option>
+      <option value="EE">EE</option>
+      <option value="ME">ME</option>
+      <option value="CS">CS</option>
+    </select>
 
-    <form id="form12" action="https://google.com/" method="get">
-      <input id="sbox12" id="s" name="s" type="text" placeholder="担当を入力してください" />
-    </form>
+    <input id="submit_place" id="s" name="s" type="text" placeholder="場所を入力してください" />
 
-    <form id="form13" action="https://google.com/" method="get">
-      <input id="sbox13" id="s" name="s" type="text" placeholder="管理者を入力してください" />
-    </form>
+    <input id="submit_user" id="s" name="s" type="text" placeholder="担当を入力してください" />
+      
+    <input id="submit_admin" id="s" name="s" type="text" placeholder="管理者を入力してください" />
 
-    <form id="form14" action="https://google.com/" method="get">
-      <input id="sbox14" id="s" name="s" type="text" placeholder="資産名を入力してください" />
-    </form>
+    <input id="submit_name" id="s" name="s" type="text" placeholder="資産名を入力してください" />
+      
+    <select id="submit_format" class="select" style="width: 200px;">
+      <option value="default">形式を選択</option>
+      <option value="PC">PC</option>
+      <option value="PHONE">PHONE</option>
+    </select>
 
-    <form id="form15" action="https://google.com/" method="get">
-      <select id="sbox15" class="select" style="width: 200px;">
-        <option value="default">形式を選択</option>
-        <option value="PC">PC</option>
-        <option value="PHONE">PHONE</option>
-      </select>
-    </form>
+    <input id="submit_number" id="s" name="s" type="text" placeholder="個数を入力してください" />
+        
+    <input id="submit_images" value="ファイルを直接開く" type="file">
 
-    <form id="form16" action="https://google.com/" method="get">
-      <input id="sbox16" id="s" name="s" type="text" placeholder="個数を入力してください" />
-    </form>
-
-    <form id="form17" action="https://google.com/" method="get">
-          <input id="sbox17" value="ファイルを直接開く" type="file">
-    </form>
+  </div>
+  <div>
+    <input id="submit_button" type="button" value="入力内容を保存" onclick="submit_input()" />
+  </div>
+  <div>
+    <input id="upload_button" type="button" value="登録" onclick="upload_input()" />
+  </div>
 
 
     <br>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    作業メモ
+    配列に実際に入れる。
+    <div class="columns">
+      <div class="column">
+        <article class="message is-primary">
+          <div class="message-body">
+            <span id="message_out">----</span>
+          </div>
+        </article>
+      </div>
+    </div>
 
-    <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/root.js"></script>
+    <script type="text/javascript" src="js/submit.js"></script>
 
   </body>
 </html>
