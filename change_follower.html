@@ -14,17 +14,69 @@
   <title>test</title>
 </head>
 
-<nav id="g_navi">
+<!-- <nav id="g_navi">
   <ul>
     <li><a href="list.html">一覧・検索</a></li>
     <li><a href="submit_follower.html">登録</a></li>
     <li><a href="change_follower.html">変更</a></li>
     <li><a href="user_info_follower.html">ユーザ情報編集</a></li>
   </ul>
-</nav>
+</nav> -->
 
 <body>
+  <h1>
+    情報変更
+  </h1>
 
+
+  <label for="Asset_name">資産名</label>
+  <input type="text" name="Asset_name" id="Asset_name">
+
+  <br>
+
+  <label for="Fromat">形式</label>
+  <select name="Fromat" id="Fromat">
+    <option value="printer">プリンター</option>
+    <option value="pc">PC</option>
+  </select>
+
+  <br>
+
+  <label for="Affiliation">所属</label>
+  <select name="Affiliation" id="Affiliation">
+    <option value="CS">CS</option>
+    <option value="ME">ME</option>
+    <option value="EE">EE</option>
+    <option value="AD">AD</option>
+  </select>
+
+  <br>
+
+  <label for="Place">場所</label>
+  <select name="Place" id="Place">
+    <option value="401">401</option>
+    <option value="402">402</option>
+    <option value="403">403</option>
+    <option value="404">404</option>
+  </select>
+
+  <br>
+
+  <label for="Responsible">担当</label>
+  <select name="Responsible" id="Responsible">
+    <option value="shimakawa">shimakawa</option>
+    <option value="ooshima">ooshima</option>
+  </select>
+
+  <br>
+
+  <label for="Administrator">管理者</label>
+  <input type="text" name="Administrator" id="Administrator">
+
+  <br>
+
+  <label for="Number">個数</label>
+  <input type="text" name="Number" id="Number">
 
   <script src="js/scripts.js"></script>
   <script src="js/root.js"></script>
