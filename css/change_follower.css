@@ -1,5 +1,13 @@
+html, body {
+    overflow: hidden;
+}
+
 h1{
     font-size: 300%;
+}
+
+.home_link {
+    font-size: 20px;
 }
 
 hr {
@@ -35,20 +43,17 @@ input {
     top: 90px;
 }
 
-.Asset_photo {
-    text-align: right;
-    /* position: absolute;
-    bottom: 300px; */
-}
-
 .Asset_photo_src {
     width: 30%;
     height: auto;
-    /* margin-right: 200px; */
+    margin-left: 1100px;
+    position: relative;
+    bottom: 350px;
 }
 
-.Asset_photo_name {
-    font-size: 35px;
-    /* position: relative;
-    right: 680px; */
+.Finish_button {
+    font-size: 20px;
+    margin-left: 1630px;
+    position: relative;
+    bottom: 270px;
 }
