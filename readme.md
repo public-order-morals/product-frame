@@ -49,10 +49,17 @@ __2. 自分のpcでサーバーを立ててローカル環境で動かす場合_
 ### ❯ HTML
 
 - index.html ... ログイン画面
+- home_follower.html ... followerのホーム画面
+- home_admin.html ... adminのホーム画面
 - list.html ... 資産の一覧表示、資産の検索
-- change.html ... 資産の変更
-- submit.html ... 資産の登録
-- user.html ... ユーザ情報確認、編集
+- change_follower.html ... followerの資産の変更
+- change_admin.html ... adminの資産変更
+- delete.html ... 資産の削除
+- submit_follower.html ... followerの資産の登録
+- submit_admin.html ... adminの資産登録
+- user_info_follower.html ... followerのユーザ情報確認、編集
+- user_info_admin.html ... adminのユーザ情報確認、編集
+- user_list.html ... ユーザーのリスト
 - +α
 
 ### ❯ CSS
