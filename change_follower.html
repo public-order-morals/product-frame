@@ -22,9 +22,14 @@
       変更
     </span>
     <span class=right>
-      <a href="home_follower">
+      <a href="home_follower.html" onclick="clickEvent()">
         ホーム
       </a>
+      <script>
+        function clickEvent() {
+          window.confirm('変更内容は保存されません。本当に移動しますか？')
+        }
+      </script>
     </span>
   </p>
   <br>
