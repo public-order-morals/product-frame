@@ -12,11 +12,16 @@ body {
   /*ボタンが等間隔に並ぶように調整*/
 }
 
-button {
-  border: none;
-  /*ボタンの枠線を除去*/
-  background: transparent;
-  /*ボタンの背景を除去*/
+.img-button {
   cursor: pointer;
-  /*ボタンの上にカーソルがあるときpointerに変更*/
+  /*ボタン(画像)の上にカーソルがあるときpointerに変更*/
+}
+
+/* リセットスタイル */
+.img-button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  position: relative;
+  display: block;
 }
